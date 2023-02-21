@@ -8,7 +8,7 @@ class HomeController extends Controller
 {
     //praktikum 2
 
-    public function index(){
-        return view('welcome');
-    }
+    // public function index(){
+    //     return view('welcome');
+    // }
 }
