@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +33,24 @@ use App\Http\Controllers\PageController;
 
 //praktikum 2
 
-Route::get('/', [PageController::class,'index']);
+// Route::get('/', [PageController::class,'index']);
 
-Route::get('/about', [PageController::class,'about']);
+// Route::get('/about', [PageController::class,'about']);
 
-Route::get('/article/{id}', [PageController::class,'article']);
+// Route::get('/article/{id}', [PageController::class,'article']);
+
+Route::get('/', [HomeController::class,'index']);
+
+Route::get('/about', [AboutController::class,'about']);
+
+Route::get('/article/{id}', [ArticleController::class,'article']);
+
+//praktikum 3
+
+Route::get('/', function (){
+    echo  '';
+});
+
+Route::prefix('admin')->group(function(){
+
+});
