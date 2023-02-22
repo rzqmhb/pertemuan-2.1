@@ -90,10 +90,8 @@ Route::prefix('program')->group(function(){
     });
 });
 
-Route::get('/about-us', function (){
-    echo  'ini adalah halaman yang menjelaskan profile dari perusahaan Lorem Ipsum';
+Route::get('/about-us', function () {
+    echo 'ini adalah halaman yang menjelaskan profile dari perusahaan Lorem Ipsum';
 });
 
-Route::resource('contact-us', ContactController::class)->only([
-    'show'
-]);
+Route::resource('contact-us', ContactController::class);
